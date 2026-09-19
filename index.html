@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ocodo Type — Foundry</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- ============================================================
+	 OCODO TYPE
+	 Both families are loaded because the foundry itself
+	 is part of the type specimen.
+	 ============================================================ -->
+    <style>
+      @font-face {
+	  font-family: "Ocodo Mono";
+	  src: url("https://cdn.jsdelivr.net/npm/@ocodo/ocodo-mono-nerd@latest/fonts/OcodoMonoNerdFont-Light.woff2")
+               format("woff2");
+	  font-weight: 300;
+	  font-style: normal;
+	  font-display: swap;
+      }
+      @font-face {
+	  font-family: "Ocodo Mono";
+	  src: url("https://cdn.jsdelivr.net/npm/@ocodo/ocodo-mono-nerd@latest/fonts/OcodoMonoNerdFont-Thin.woff2")
+               format("woff2");
+	  font-weight: 100;
+	  font-style: normal;
+	  font-display: swap;
+      }
+      @font-face {
+	  font-family: "Ocodo Mono DotZero";
+	  src: url("https://cdn.jsdelivr.net/npm/@ocodo/ocodo-mono-dotzero-nerd@1.0.0/fonts/OcodoMonoDotZeroNerdFont-Light.woff2")
+               format("woff2");
+	  font-weight: 300;
+	  font-style: normal;
+	  font-display: swap;
+      }
+      @font-face {
+	  font-family: "Ocodo Mono DotZero";
+	  src: url("https://cdn.jsdelivr.net/npm/@ocodo/ocodo-mono-dotzero-nerd@1.0.0/fonts/OcodoMonoDotZeroNerdFont-Thin.woff2")
+               format("woff2");
+	  font-weight: 100;
+	  font-style: normal;
+	  font-display: swap;
+      }
+      /* ============================================================
+       PALETTE
+       ============================================================ */
+      :root {
+	  color-scheme: dark;
+	  --bg: #211d19;
+	  --panel: #27221d;
+	  --panel-2: #2c2721;
+	  --text: #e3d8c8;
+	  --muted: #a99a87;
+	  --grid: rgba(191, 158, 124, 0.065);
+	  --grid-fine: rgba(191, 158, 124, 0.025);
+	  --border: #51473c;
+	  --border-soft: #443b32;
+	  --accent: #b99570;
+	  --accent-bright: #c9aa89;
+	  --accent-dark: #786553;
+      }
+      /* ============================================================
+       BASE
+       ============================================================ */
+      * {
+	  box-sizing: border-box;
+	  font-family: "Ocodo Mono";
+      }
+      html {
+	  scroll-behavior: smooth;
+	  background: var(--bg);
+      }
+      body {
+	  margin: 0;
+	  background: var(--bg);
+	  color: var(--text);
+      }
+      ::selection {
+	  background: var(--accent);
+	  color: var(--bg);
+      }
+      /* ============================================================
+       GRID
+       ============================================================ */
+      .blueprint-grid {
+	  background-image:
+              linear-gradient(
+		  var(--grid) 1px,
+		  transparent 1px
+              ),
+              linear-gradient(
+		  90deg,
+		  var(--grid) 1px,
+		  transparent 1px
+              ),
+              linear-gradient(
+		  var(--grid-fine) 1px,
+		  transparent 1px
+              ),
+              linear-gradient(
+		  90deg,
+		  var(--grid-fine) 1px,
+		  transparent 1px
+              );
+	  background-size:
+              80px 80px,
+              80px 80px,
+              16px 16px,
+              16px 16px;
+      }
+      .fine-grid {
+	  background-image:
+              linear-gradient(
+		  rgba(191, 158, 124, 0.075) 1px,
+		  transparent 1px
+              ),
+              linear-gradient(
+		  90deg,
+		  rgba(191, 158, 124, 0.075) 1px,
+		  transparent 1px
+              );
+	  background-size: 32px 32px;
+      }
+      /* ============================================================
+       CROSSHAIR
+       ============================================================ */
+      .crosshair {
+	  position: relative;
+	  width: 22px;
+	  height: 22px;
+	  flex: 0 0 auto;
+      }
+      .crosshair::before,
+      .crosshair::after {
+	  content: "";
+	  position: absolute;
+	  background: var(--accent);
+	  opacity: 0.72;
+      }
+      .crosshair::before {
+	  width: 100%;
+	  height: 1px;
+	  left: 0;
+	  top: 50%;
+      }
+      .crosshair::after {
+	  width: 1px;
+	  height: 100%;
+	  left: 50%;
+	  top: 0;
+      }
+      /* ============================================================
+       REGISTRATION CORNERS
+       ============================================================ */
+      .corner-tl,
+      .corner-tr,
+      .corner-bl,
+      .corner-br {
+	  position: absolute;
+	  width: 18px;
+	  height: 18px;
+	  pointer-events: none;
+      }
+      .corner-tl {
+	  top: 0;
+	  left: 0;
+	  border-top: 1px solid var(--accent-dark);
+	  border-left: 1px solid var(--accent-dark);
+      }
+      .corner-tr {
+	  top: 0;
+	  right: 0;
+	  border-top: 1px solid var(--accent-dark);
+	  border-right: 1px solid var(--accent-dark);
+      }
+      .corner-bl {
+	  bottom: 0;
+	  left: 0;
+	  border-bottom: 1px solid var(--accent-dark);
+	  border-left: 1px solid var(--accent-dark);
+      }
+      .corner-br {
+	  bottom: 0;
+	  right: 0;
+	  border-bottom: 1px solid var(--accent-dark);
+	  border-right: 1px solid var(--accent-dark);
+      }
+      /* ============================================================
+       DIMENSION
+       ============================================================ */
+      .dimension {
+	  position: relative;
+	  height: 16px;
+	  border-top: 1px solid rgba(191, 158, 124, 0.4);
+      }
+      .dimension::before,
+      .dimension::after {
+	  content: "";
+	  position: absolute;
+	  top: -5px;
+	  width: 1px;
+	  height: 10px;
+	  background: var(--accent);
+      }
+      .dimension::before {
+	  left: 0;
+      }
+      .dimension::after {
+	  right: 0;
+      }
+      /* ============================================================
+       DISPLAY FAMILIES
+       ============================================================ */
+      .mono {
+	  font-family: "Ocodo Mono";
+      }
+      .dotzero {
+	  font-family: "Ocodo Mono DotZero";
+      }
+      /* ============================================================
+       SWEEP
+       ============================================================ */
+      .sweep {
+	  animation: sweep 12s linear infinite;
+      }
+      @keyframes sweep {
+	  from {
+              transform: translateY(-100vh);
+	  }
+	  to {
+              transform: translateY(100vh);
+	  }
+      }
+      </style>
+      </head>
+      <body class="min-h-screen overflow-x-hidden bg-[#211d19] text-[#e3d8c8]">
+      <!-- Blueprint atmosphere -->
+      <div
+	class="pointer-events-none fixed inset-0 z-0 blueprint-grid opacity-70"
+	></div>
+      <div
+	class="sweep pointer-events-none fixed left-0 top-0 z-0 h-px w-full bg-[#b99570] opacity-[0.07]"
+	></div>
+      <!-- ============================================================
+	   HEADER
+	   ============================================================ -->
+      <header class="relative z-10 border-b border-[#51473c]">
+	<div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+	  <div
+            class="flex h-16 items-center justify-between border-x border-[#51473c] px-4"
+	    >
+            <div class="flex items-center gap-4">
+              <div class="crosshair"></div>
+              <span class="dotzero text-sm tracking-[0.08em]">
+		<a href="https://www.npmjs.com/org/ocodo">
+		  OCODO TYPE
+		</a>
+              </span>
+            </div>
+            <div
+              class="flex items-center gap-5 text-[9px] tracking-[0.15em] text-[#a99a87]"
+              >
+              <span>FOUNDRY / INDEX</span>
+              <span>2026</span>
+            </div>
+	  </div>
+	</div>
+      </header>
+      <main class="relative z-10">
+	<!-- ============================================================
+             HERO
+             ============================================================ -->
+	<section
+	  class="mx-auto max-w-[1600px] border-x border-b border-[#51473c] px-5 sm:px-8 lg:px-12"
+	  >
+	  <div
+            class="relative min-h-[calc(100vh-4rem)] overflow-hidden border-x border-[#51473c] fine-grid"
+	    >
+            <span class="corner-tl"></span>
+            <span class="corner-tr"></span>
+            <span class="corner-bl"></span>
+            <span class="corner-br"></span>
+            <!-- Coordinates -->
+            <div
+              class="absolute left-4 top-5 text-[8px] text-[#a99a87]"
+              >
+              X:000 / Y:000
+            </div>
+            <div
+              class="absolute right-4 top-5 text-[8px] text-[#a99a87]"
+              >
+              SCALE / 1:1
+            </div>
+            <div
+              class="absolute bottom-5 left-4 text-[8px] text-[#a99a87]"
+              >
+              TYPE / SYSTEM
+            </div>
+            <div
+              class="absolute bottom-5 right-4 text-[8px] text-[#a99a87]"
+              >
+              02 FAMILIES
+            </div>
+            <div
+              class="flex min-h-[calc(100vh-4rem)] flex-col justify-center px-6 py-24 sm:px-12 lg:px-20"
+              >
+              <div
+		class="mb-12 flex flex-wrap items-center gap-4 text-[10px] tracking-[0.16em] text-[#b99570]"
+		>
+		<span>OCODO</span>
+		<span class="h-px w-16 bg-[#b99570]"></span>
+		<span>TYPE FOUNDRY</span>
+              </div>
+              <h1
+		class="dotzero max-w-[1400px] text-[clamp(4.5rem,4vw,12rem)] font-thin leading-[0.72] tracking-[-0.085em]"
+		>
+		OCODO MONO FONTS
+              </h1>
+              <div
+		class="mt-20 grid gap-10 lg:grid-cols-[1fr_320px]"
+		>
+		<div>
+		  <div class="dimension mb-3"></div>
+		  <div
+                    class="flex justify-between text-[8px] text-[#a99a87]"
+		    >
+                    <span>000</span>
+                    <span>OCODO TYPE / 002</span>
+		  </div>
+		</div>
+		<div
+		  class="text-xs leading-6 text-[#a99a87]"
+		  >
+		  Two monospaced type families.
+		  <br /><br />
+		  Designed for code,
+		  systems, interfaces,
+		  terminals and technical
+		  environments.
+		</div>
+              </div>
+            </div>
+	  </div>
+	</section>
+	<!-- ============================================================
+             COLLECTION
+             ============================================================ -->
+	<section
+	  class="mx-auto max-w-[1600px] border-x border-b border-[#51473c] px-5 py-24 sm:px-8 lg:px-12"
+	  >
+	  <div class="mb-16">
+            <div
+              class="mb-4 text-[10px] tracking-[0.15em] text-[#b99570]"
+              >
+              01 / COLLECTION
+            </div>
+            <h2
+              class="dotzero text-4xl font-thin tracking-[-0.05em] sm:text-6xl"
+              >
+              TWO FAMILIES
+            </h2>
+	  </div>
+	  <div
+            class="grid gap-px border border-[#51473c] bg-[#51473c] lg:grid-cols-2"
+	    >
+            <!-- ======================================================
+		 MONO
+		 ====================================================== -->
+            <article
+              class="group relative overflow-hidden bg-[#211d19] transition-colors duration-300 hover:bg-[#27221d]"
+              >
+              <span class="corner-tl"></span>
+              <span class="corner-br"></span>
+              <div class="p-6 sm:p-10 lg:p-12">
+		<div
+		  class="mb-16 flex items-center justify-between text-[9px]"
+		  >
+		  <span class="text-[#b99570]">
+                    FAMILY / 01
+		  </span>
+		  <span class="text-[#a99a87]">
+                    MONOSPACED
+		  </span>
+		</div>
+		<div
+		  class="mono mb-16 text-[clamp(4rem,9vw,9rem)] font-thin leading-[0.78] tracking-[-0.08em]"
+		  >
+		  MONO
+		</div>
+		<div class="mb-12">
+		  <div
+                    class="mb-4 text-[10px] tracking-[0.12em] text-[#b99570]"
+		    >
+                    OCODO MONO
+		  </div>
+		  <p
+                    class="max-w-lg text-xs leading-6 text-[#a99a87]"
+		    >
+                    A monospaced coding typeface
+                    built for terminals, editors,
+                    interfaces and technical systems.
+		  </p>
+		</div>
+		<div
+		  class="mono mb-10 border-y border-[#51473c] py-7 text-[clamp(2rem,1vw,4rem)] font-light leading-[1.1]"
+		  >
+		  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+		  <br />
+		  0123456789
+		</div>
+		<div
+		  class="mb-10 grid grid-cols-2 gap-4 text-[8px] text-[#a99a87]"
+		  >
+		  <div>
+                    <div class="mb-2 text-[#b99570]">
+                      WEIGHTS
+                    </div>
+                    LIGHT / THIN
+		  </div>
+		  <div>
+                    <div class="mb-2 text-[#b99570]">
+                      USE
+                    </div>
+                    CODE / UI / DATA
+		  </div>
+		</div>
+		<a
+		  href="./specimen-mono.html"
+		  class="inline-flex items-center gap-5 border border-[#51473c] px-6 py-4 text-[9px] tracking-[0.12em] text-[#b99570] transition duration-300 hover:border-[#b99570] hover:bg-[#b99570] hover:text-[#211d19]"
+		  >
+		  OPEN SPECIMEN
+		  <span>→</span>
+		</a>
+              </div>
+            </article>
+            <!-- ======================================================
+		 MONO DOTZERO
+		 ====================================================== -->
+            <article
+              class="group relative overflow-hidden bg-[#211d19] transition-colors duration-300 hover:bg-[#27221d]"
+              >
+              <span class="corner-tr"></span>
+              <span class="corner-bl"></span>
+              <div class="p-6 sm:p-10 lg:p-12">
+		<div
+		  class="mb-16 flex items-center justify-between text-[9px]"
+		  >
+		  <span class="text-[#b99570]">
+                    FAMILY / 02
+		  </span>
+		  <span class="text-[#a99a87]">
+                    MONOSPACED
+		  </span>
+		</div>
+		<div
+		  class="dotzero mb-16 text-[clamp(4rem,9vw,9rem)] font-thin leading-[0.78] tracking-[-0.08em]"
+		  >
+		  DOTZERO
+		</div>
+		<div class="mb-12">
+		  <div
+                    class="mb-4 text-[10px] tracking-[0.12em] text-[#b99570]"
+		    >
+                    OCODO MONO DOTZERO
+		  </div>
+		  <p
+                    class="max-w-lg text-xs leading-6 text-[#a99a87]"
+		    >
+                    A monospaced coding typeface
+                    with a distinctive DotZero
+                    character treatment.
+		  </p>
+		</div>
+		<div
+		  class="dotzero mb-10 border-y border-[#51473c] py-7 text-[clamp(2rem,1vw,4rem)] font-light leading-[1.1]"
+		  >
+		  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+		  <br />
+		  0123456789
+		</div>
+		<div
+		  class="mb-10 grid grid-cols-2 gap-4 text-[8px] text-[#a99a87]"
+		  >
+		  <div>
+                    <div class="mb-2 text-[#b99570]">
+                      WEIGHTS
+                    </div>
+                    LIGHT / THIN
+		  </div>
+		  <div>
+                    <div class="mb-2 text-[#b99570]">
+                      USE
+                    </div>
+                    CODE / UI / DATA
+		  </div>
+		</div>
+		<a
+		  href="./specimen-mono-dotzero.html"
+		  class="inline-flex items-center gap-5 border border-[#51473c] px-6 py-4 text-[9px] tracking-[0.12em] text-[#b99570] transition duration-300 hover:border-[#b99570] hover:bg-[#b99570] hover:text-[#211d19]"
+		  >
+		  OPEN SPECIMEN
+		  <span>→</span>
+		</a>
+              </div>
+            </article>
+	  </div>
+	</section>
+	<!-- ============================================================
+             FOOTER
+             ============================================================ -->
+	<footer
+	  class="mx-auto max-w-[1600px] border-x border-[#51473c] px-5 sm:px-8 lg:px-12"
+	  >
+	  <div
+            class="grid gap-8 py-12 sm:grid-cols-3"
+	    >
+            <div>
+              <div
+		class="mb-3 text-[9px] text-[#b99570]"
+		>
+		FOUNDRY
+              </div>
+              <div class="dotzero text-xs">
+		<a href="https://www.npmjs.com/org/ocodo">
+		  OCODO TYPE
+		</a>
+              </div>
+            </div>
+            <div>
+              <div
+		class="mb-3 text-[9px] text-[#b99570]"
+		>
+		FAMILIES
+              </div>
+              <div class="text-xs">
+		MONO / DOTZERO
+              </div>
+            </div>
+            <div>
+              <div
+		class="mb-3 text-[9px] text-[#b99570]"
+		>
+		SYSTEM
+              </div>
+              <div class="text-xs">
+		CODE / UI / ICONS
+              </div>
+            </div>
+	  </div>
+	  <div
+            class="border-t border-[#51473c] py-5 text-[8px] text-[#a99a87]"
+	    >
+            <div
+              class="flex flex-col justify-between gap-3 sm:flex-row"
+              >
+              <span>
+		OCODO TYPE SYSTEM / 2026
+              </span>
+              <span>
+		END OF INDEX
+              </span>
+            </div>
+	  </div>
+	</footer>
+      </main>
+</body>
+</html>
