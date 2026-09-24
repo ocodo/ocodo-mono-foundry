@@ -1,15 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import BlueprintAtmostphere from "@/components/BlueprintAtmostphere";
 import TeleportToTop from "@/components/TeleportToTop";
 import Index from "@/pages/Index";
 import DotZeroSpecimen from "@/pages/DotZeroSpecimen";
 import MonoSpecimen from "@/pages/MonoSpecimen";
 
+const basename = window.location.pathname.split("/").filter(Boolean)[0]
+  ? `/${window.location.pathname.split("/").filter(Boolean)[0]}`
+  : "/";
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <TeleportToTop />
-
       <Routes>
         <Route
 	  path="/"
