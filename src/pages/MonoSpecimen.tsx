@@ -7,14 +7,12 @@ import GlyphSampler from "@/components/GlyphSampler";
 
 export default function MonoSpecimen() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#211d19] text-[#e3d8c8]">
+    <div className="mono min-h-screen overflow-x-hidden bg-[#211d19] text-[#e3d8c8]">
       <BlueprintAtmostphere />
-
       <Header />
-
       <main className="relative z-10">
         {/* HERO */}
-        <section className="mx-auto max-w-[1600px] border-x border-b border-[#51473c] px-5 sm:px-8 lg:px-12">
+        <section className={`mx-auto max-w-[1600px] border-x border-b border-[#51473c] px-5 sm:px-8 lg:px-12`}>
           <div className="fine-grid relative min-h-[calc(100vh-4rem)] overflow-hidden border-x border-[#51473c]">
             <span className="corner-tl" />
             <span className="corner-tr" />
@@ -44,7 +42,7 @@ export default function MonoSpecimen() {
                 <span>OCODO MONO &amp; NERD</span>
               </div>
 
-              <h1 className="font-mono max-w-[1400px] text-[clamp(4.5rem,4vw,12rem)] font-thin leading-[0.72]">
+              <h1 className="max-w-1400px text-[clamp(4.5rem,4vw,12rem)] font-thin leading-[0.72]">
                 OCODO-MONO
               </h1>
 
@@ -75,7 +73,6 @@ export default function MonoSpecimen() {
         <SpecimenSection
           index="01 / PACKAGES"
           title="FAMILY VARIANTS"
-          fontClass="font-mono"
         >
           <div className="grid gap-px border border-[#51473c] bg-[#51473c] lg:grid-cols-2">
             <article className="relative overflow-hidden bg-[#211d19] p-6 sm:p-10 lg:p-12">
@@ -91,7 +88,7 @@ export default function MonoSpecimen() {
                 </span>
               </div>
 
-              <h3 className="font-mono mb-6 text-3xl font-light">
+              <h3 className="mb-6 text-3xl font-light">
                 ocodo-mono
               </h3>
 
@@ -101,7 +98,7 @@ export default function MonoSpecimen() {
                 code display and technical publishing.
               </p>
 
-              <div className="font-mono border-t border-[#51473c] pt-6 text-xl font-thin leading-relaxed">
+              <div className="border-t border-[#51473c] pt-6 text-xl font-thin leading-relaxed">
                 const core = () =&gt; "ocodo-mono";
               </div>
             </article>
@@ -119,7 +116,7 @@ export default function MonoSpecimen() {
                 </span>
               </div>
 
-              <h3 className="font-mono mb-6 text-3xl font-light">
+              <h3 className=" mb-6 text-3xl font-light">
                 ocodo-mono-nerd
               </h3>
 
@@ -129,7 +126,7 @@ export default function MonoSpecimen() {
                 statuslines, and shell environments.
               </p>
 
-              <div className="font-mono border-t border-[#51473c] pt-6 text-xl font-thin leading-relaxed">
+              <div className=" border-t border-[#51473c] pt-6 text-xl font-thin leading-relaxed">
                 󰅩 const nerd = () =&gt; "ocodo-mono-nerd"; 
               </div>
             </article>
@@ -140,17 +137,14 @@ export default function MonoSpecimen() {
         <SpecimenSection
           index="02 / WEIGHTS"
           title="LIGHT & THIN"
-          fontClass="font-mono"
         >
           <div className="space-y-12">
             <WeightSample
-              fontClass="font-mono"
               weight={300}
               label="OCODO MONO LIGHT"
             />
 
             <WeightSample
-              fontClass="font-mono"
               weight={100}
               label="OCODO MONO THIN"
             />
@@ -161,9 +155,8 @@ export default function MonoSpecimen() {
         <SpecimenSection
           index="03 / NERD VARIANT"
           title="GLYPH EXTENSIONS"
-          fontClass="font-mono"
         >
-          <GlyphSampler fontClass="font-mono" />
+          <GlyphSampler />
         </SpecimenSection>
 
         <Footer />

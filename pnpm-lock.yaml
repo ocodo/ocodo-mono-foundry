@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      react:
-        specifier: ^19.1.1
-        version: 19.3.0
       react-dom:
         specifier: ^19.1.1
         version: 19.3.0(react@19.3.0)
@@ -24,9 +21,15 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.13
         version: 4.3.3(vite@7.3.6(jiti@2.7.0)(lightningcss@1.32.0))
+      '@types/react':
+        specifier: ^19.3.0
+        version: 19.3.0
       '@vitejs/plugin-react':
         specifier: ^5.0.4
         version: 5.2.0(vite@7.3.6(jiti@2.7.0)(lightningcss@1.32.0))
+      react:
+        specifier: ^19.3.0
+        version: 19.3.0
       tailwindcss:
         specifier: ^4.1.13
         version: 4.3.3
@@ -551,6 +554,9 @@ packages:
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
 
+  '@types/react@19.3.0':
+    resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
+
   '@vitejs/plugin-react@5.2.0':
     resolution: {integrity: sha512-YmKkfhOAi3wsB1PhJq5Scj3GXMn3WvtQ/JC0xoopuHoXSdmtdStOpFrYaT1kie2YgFBcIe64ROzMYRjCrYOdYw==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -579,6 +585,9 @@ packages:
   cookie@1.1.1:
     resolution: {integrity: sha512-ei8Aos7ja0weRpFzJnEA9UHJ/7XQmqglbRwnf2ATjcB9Wq874VKH9kfjjirM6UhU2/E5fFYadylyhFldcqSidQ==}
     engines: {node: '>=18'}
+
+  csstype@3.2.3:
+    resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -1253,6 +1262,10 @@ snapshots:
 
   '@types/estree@1.0.9': {}
 
+  '@types/react@19.3.0':
+    dependencies:
+      csstype: 3.2.3
+
   '@vitejs/plugin-react@5.2.0(vite@7.3.6(jiti@2.7.0)(lightningcss@1.32.0))':
     dependencies:
       '@babel/core': 7.29.7
@@ -1282,6 +1295,8 @@ snapshots:
   cookie-es@3.1.1: {}
 
   cookie@1.1.1: {}
+
+  csstype@3.2.3: {}
 
   debug@4.4.3:
     dependencies:

@@ -7,11 +7,9 @@ import GlyphSampler from "@/components/GlyphSampler";
 
 export default function DotZeroSpecimen() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#211d19] text-[#e3d8c8]">
+    <div className="dotzero min-h-screen overflow-x-hidden bg-[#211d19] text-[#e3d8c8]">
       <BlueprintAtmostphere />
-
       <Header />
-
       <main className="relative z-10">
         {/* HERO */}
         <section className="mx-auto max-w-[1600px] border-x border-b border-[#51473c] px-5 sm:px-8 lg:px-12">
@@ -44,7 +42,7 @@ export default function DotZeroSpecimen() {
                 <span>OCODO MONO DOTZERO &amp; NERD</span>
               </div>
 
-              <h1 className="font-dotzero max-w-[1400px] text-[clamp(4rem,3.5vw,10rem)] font-thin leading-[0.72]">
+              <h1 className="max-w-1400px text-[clamp(4rem,3.5vw,10rem)] font-thin leading-[0.72]">
                 OCODO-MONO-DOTZERO
               </h1>
 
@@ -76,7 +74,6 @@ export default function DotZeroSpecimen() {
         <SpecimenSection
           index="01 / PACKAGES"
           title="FAMILY VARIANTS"
-          fontClass="font-dotzero"
         >
           <div className="grid gap-px border border-[#51473c] bg-[#51473c] lg:grid-cols-2">
             <article className="relative overflow-hidden bg-[#211d19] p-6 sm:p-10 lg:p-12">
@@ -92,7 +89,7 @@ export default function DotZeroSpecimen() {
                 </span>
               </div>
 
-              <h3 className="font-dotzero mb-6 text-3xl font-light">
+              <h3 className="mb-6 text-3xl font-light">
                 ocodo-mono-dotzero
               </h3>
 
@@ -102,7 +99,7 @@ export default function DotZeroSpecimen() {
                 for pristine code execution and UI data output.
               </p>
 
-              <div className="font-dotzero border-t border-[#51473c] pt-6 text-xl font-thin leading-relaxed">
+              <div className="border-t border-[#51473c] pt-6 text-xl font-thin leading-relaxed">
                 const val = 0x0000; // ocodo-mono-dotzero
               </div>
             </article>
@@ -120,7 +117,7 @@ export default function DotZeroSpecimen() {
                 </span>
               </div>
 
-              <h3 className="font-dotzero mb-6 text-3xl font-light">
+              <h3 className="mb-6 text-3xl font-light">
                 ocodo-mono-dotzero-nerd
               </h3>
 
@@ -130,7 +127,7 @@ export default function DotZeroSpecimen() {
                 indicators.
               </p>
 
-              <div className="font-dotzero border-t border-[#51473c] pt-6 text-xl font-thin leading-relaxed">
+              <div className="border-t border-[#51473c] pt-6 text-xl font-thin leading-relaxed">
                 󰅩 const val = 0x0000; // ocodo-mono-dotzero-nerd 
               </div>
             </article>
@@ -141,17 +138,14 @@ export default function DotZeroSpecimen() {
         <SpecimenSection
           index="02 / WEIGHTS"
           title="LIGHT & THIN"
-          fontClass="font-dotzero"
         >
           <div className="space-y-12">
             <WeightSample
-              fontClass="font-dotzero"
               weight={300}
               label="OCODO MONO DOTZERO LIGHT"
             />
 
             <WeightSample
-              fontClass="font-dotzero"
               weight={100}
               label="OCODO MONO DOTZERO THIN"
             />
@@ -162,11 +156,9 @@ export default function DotZeroSpecimen() {
         <SpecimenSection
           index="03 / NERD VARIANT"
           title="GLYPH EXTENSIONS"
-          fontClass="font-dotzero"
         >
-          <GlyphSampler fontClass="font-dotzero" />
+          <GlyphSampler />
         </SpecimenSection>
-
         <Footer />
       </main>
     </div>

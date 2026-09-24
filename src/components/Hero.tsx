@@ -30,7 +30,7 @@ export default function Hero() {
             <span>TYPE FOUNDRY</span>
           </div>
 
-          <h1 className="dotzero max-w-[1400px] text-[clamp(4.5rem,4vw,12rem)] font-thin leading-[0.72]">
+          <h1 className="dotzero max-w-1400px text-[clamp(4.5rem,4vw,12rem)] font-thin leading-[0.72]">
             OCODO MONO FONTS
           </h1>
 

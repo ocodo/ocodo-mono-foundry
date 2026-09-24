@@ -8,7 +8,7 @@ export default function WeightSample({
   label,
 }: WeightSampleProps) {
   return (
-    <div className="border border-[#51473c] bg-[#27221d] p-6 sm:p-10">
+    <div className={`border border-[#51473c] bg-[#27221d] p-6 sm:p-10`}>
       <div className="mb-6 flex items-center justify-between border-b border-[#51473c] pb-4 text-[9px] text-[#a99a87]">
         <span className="text-[#b99570]">
           WEIGHT / {weight}
@@ -18,7 +18,7 @@ export default function WeightSample({
       </div>
 
       <div
-        className={`font-dotzero text-[clamp(1.5rem,3vw,3.5rem)] leading-tight ${
+        className={`text-[clamp(1.5rem,3vw,3.5rem)] leading-tight ${
           weight === 300 ? "font-light" : "font-thin"
         }`}
       >

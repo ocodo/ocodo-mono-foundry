@@ -99,7 +99,7 @@ export default function FamilyCard({ family }: FamilyCardProps) {
               className="flex items-center justify-between gap-4 bg-[#211d19] px-4 py-3 text-[#a99a87] transition-colors duration-300 hover:bg-[#27221d] hover:text-[#e3d8c8]"
             >
               <span className="text-[#b99570]">NPM</span>
-              <span className="mono truncate">{npm}</span>
+              <span className="truncate">{npm}</span>
               <span>→</span>
             </a>
 
@@ -108,7 +108,7 @@ export default function FamilyCard({ family }: FamilyCardProps) {
               className="flex items-center justify-between gap-4 bg-[#211d19] px-4 py-3 text-[#a99a87] transition-colors duration-300 hover:bg-[#27221d] hover:text-[#e3d8c8]"
             >
               <span className="text-[#b99570]">GITHUB</span>
-              <span className="mono truncate">
+              <span className="truncate">
                 {github.replace("https://github.com/", "")}
               </span>
               <span>→</span>
@@ -119,7 +119,7 @@ export default function FamilyCard({ family }: FamilyCardProps) {
               className="flex items-center justify-between gap-4 bg-[#211d19] px-4 py-3 text-[#a99a87] transition-colors duration-300 hover:bg-[#27221d] hover:text-[#e3d8c8]"
             >
               <span className="text-[#b99570]">CDN</span>
-              <span className="mono truncate">
+              <span className="truncate">
                 {cdn.replace("https://", "")}
               </span>
               <span>→</span>

@@ -1,7 +1,3 @@
-interface GlyphSamplerProps {
-  fontClass: "font-mono" | "font-dotzero";
-}
-
 const glyphs = [
   ["󰅩", "U+F0169"],
   ["", "U+E795"],
@@ -17,9 +13,7 @@ const glyphs = [
   ["󰅟", "U+F015F"],
 ] as const;
 
-export default function GlyphSampler({
-  fontClass,
-}: GlyphSamplerProps) {
+export default function GlyphSampler() {
   return (
     <div className="border border-[#51473c] bg-[#27221d] p-8 sm:p-12">
       <div className="mb-8 text-[9px] text-[#b99570]">
@@ -27,7 +21,7 @@ export default function GlyphSampler({
       </div>
 
       <div
-        className={`${fontClass} grid grid-cols-2 gap-6 text-2xl text-[#e3d8c8] sm:grid-cols-4 md:grid-cols-6`}
+        className={`grid grid-cols-2 gap-6 text-2xl text-[#e3d8c8] sm:grid-cols-4 md:grid-cols-6`}
       >
         {glyphs.map(([glyph, codepoint]) => (
           <div
