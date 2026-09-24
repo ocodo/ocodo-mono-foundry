@@ -21,7 +21,7 @@ const families: FontFamily[] = [
     title: "OCODO MONO",
     description:
       "A monospaced coding typeface built for terminals, editors, interfaces and technical systems.",
-    specimen: "./specimen-mono.html",
+    specimen: "/specimen-mono",
     npm: "@ocodo/ocodo-mono-nerd",
     github: "https://github.com/ocodo/ocodo-mono/releases",
     cdn: "https://cdn.jsdelivr.net/npm/@ocodo/ocodo-mono-nerd/",
@@ -34,7 +34,7 @@ const families: FontFamily[] = [
     title: "OCODO MONO DOTZERO",
     description:
       "A monospaced coding typeface with a distinctive DotZero character treatment.",
-    specimen: "./specimen-mono-dotzero.html",
+    specimen: "/specimen-mono-dotzero",
     npm: "@ocodo/ocodo-mono-dotzero-nerd",
     github: "https://github.com/ocodo/ocodo-mono-dotzero/releases",
     cdn: "https://cdn.jsdelivr.net/npm/@ocodo/ocodo-mono-dotzero-nerd@1.0.0/",

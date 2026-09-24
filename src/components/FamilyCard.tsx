@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { FontFamily } from "@/components/Collection";
 
 interface FamilyCardProps {
@@ -73,13 +74,13 @@ export default function FamilyCard({ family }: FamilyCardProps) {
           </div>
         </div>
 
-        <a
-          href={specimen}
+        <Link
+          to={specimen}
           className="inline-flex items-center gap-5 border border-[#51473c] px-6 py-4 text-[9px] text-[#b99570] transition duration-300 hover:border-[#b99570] hover:bg-[#b99570] hover:text-[#211d19]"
         >
           OPEN SPECIMEN
           <span>→</span>
-        </a>
+        </Link>
 
         <div className="mt-12 border-t border-[#51473c] pt-8">
           <div className="mb-5 flex items-center justify-between text-[9px]">
@@ -97,14 +98,8 @@ export default function FamilyCard({ family }: FamilyCardProps) {
               href={`https://www.npmjs.com/package/${npm}`}
               className="flex items-center justify-between gap-4 bg-[#211d19] px-4 py-3 text-[#a99a87] transition-colors duration-300 hover:bg-[#27221d] hover:text-[#e3d8c8]"
             >
-              <span className="text-[#b99570]">
-                NPM
-              </span>
-
-              <span className="mono truncate">
-                {npm}
-              </span>
-
+              <span className="text-[#b99570]">NPM</span>
+              <span className="mono truncate">{npm}</span>
               <span>→</span>
             </a>
 
@@ -112,14 +107,10 @@ export default function FamilyCard({ family }: FamilyCardProps) {
               href={github}
               className="flex items-center justify-between gap-4 bg-[#211d19] px-4 py-3 text-[#a99a87] transition-colors duration-300 hover:bg-[#27221d] hover:text-[#e3d8c8]"
             >
-              <span className="text-[#b99570]">
-                GITHUB
-              </span>
-
+              <span className="text-[#b99570]">GITHUB</span>
               <span className="mono truncate">
                 {github.replace("https://github.com/", "")}
               </span>
-
               <span>→</span>
             </a>
 
@@ -127,14 +118,10 @@ export default function FamilyCard({ family }: FamilyCardProps) {
               href={cdn}
               className="flex items-center justify-between gap-4 bg-[#211d19] px-4 py-3 text-[#a99a87] transition-colors duration-300 hover:bg-[#27221d] hover:text-[#e3d8c8]"
             >
-              <span className="text-[#b99570]">
-                CDN
-              </span>
-
+              <span className="text-[#b99570]">CDN</span>
               <span className="mono truncate">
                 {cdn.replace("https://", "")}
               </span>
-
               <span>→</span>
             </a>
           </div>
