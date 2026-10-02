@@ -1,8 +1,8 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import TeleportToTop from "@/components/TeleportToTop";
-import Index from "@/pages/Index";
-import DotZeroSpecimen from "@/pages/DotZeroSpecimen";
-import MonoSpecimen from "@/pages/MonoSpecimen";
+import { TeleportToTop } from "@/components/TeleportToTop";
+import { DotZeroSpecimen } from "@/pages/DotZeroSpecimen";
+import { Index } from "@/pages/Index";
+import { MonoSpecimen } from "@/pages/MonoSpecimen";
 
 export default function App() {
   return (

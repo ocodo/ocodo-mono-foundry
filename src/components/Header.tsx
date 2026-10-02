@@ -2,8 +2,8 @@ import { Github, Npm } from "pixelarticons/react";
 import type { FC } from "react";
 
 interface HeaderProps {
-  npmLink: string;
-  githubLink: string;
+  npmLink?: string;
+  githubLink?: string;
 }
 
 export const Header: FC<HeaderProps> = ({ npmLink, githubLink }) => {
@@ -16,12 +16,17 @@ export const Header: FC<HeaderProps> = ({ npmLink, githubLink }) => {
             <div className="flex flex-row gap-5 items-center py-4">
               OCODO TYPE
 
-              <a className="dotzero text-sm" href={npmLink}>
-                <Npm />
-              </a>
-              <a className="dotzero text-sm" href={githubLink}>
-                <Github />
-              </a>
+              {npmLink &&
+                <a className="dotzero text-sm" href={npmLink}>
+                  <Npm />
+                </a>
+              }
+
+              {githubLink &&
+                <a className="dotzero text-sm" href={githubLink}>
+                  <Github />
+                </a>
+              }
             </div>
 
           </div>
@@ -32,6 +37,6 @@ export const Header: FC<HeaderProps> = ({ npmLink, githubLink }) => {
           </div>
         </div>
       </div>
-    </header >
+    </header>
   );
 }

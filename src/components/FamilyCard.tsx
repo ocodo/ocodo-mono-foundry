@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import type { FontFamily } from "@/components/Collection";
+import type { FC } from "react";
 
 interface FamilyCardProps {
   family: FontFamily;
 }
 
-export default function FamilyCard({ family }: FamilyCardProps) {
+export const FamilyCard:FC<FamilyCardProps>= ({ family }) => {
   const {
     number,
     name,

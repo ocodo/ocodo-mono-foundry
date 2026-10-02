@@ -1,4 +1,4 @@
-export default function Hero() {
+export const Hero = () => {
   return (
     <section className="mx-auto max-w-[1600px] border-x border-b border-[#51473c] px-5 sm:px-8 lg:px-12">
       <div className="fine-grid relative min-h-[calc(100vh-4rem)] overflow-hidden border-x border-[#51473c]">

@@ -1,4 +1,5 @@
-import FamilyCard from "@/components/FamilyCard";
+import { FamilyCard } from "@/components/FamilyCard";
+
 
 export interface FontFamily {
   id: string;
@@ -42,7 +43,7 @@ const families: FontFamily[] = [
   },
 ];
 
-export default function Collection() {
+export const Collection = () => {
   return (
     <section className="mx-auto max-w-[1600px] border-x border-b border-[#51473c] px-5 py-24 sm:px-8 lg:px-12">
       <div className="mb-16">

@@ -1,11 +1,11 @@
-import BlueprintAtmostphere from "@/components/BlueprintAtmostphere";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SpecimenSection } from "@/components/SpecimenSection";
 import { WeightSample } from "@/components/WeightSample";
 import { GlyphSampler } from "@/components/GlyphSampler";
+import { BlueprintAtmosphere } from "@/components/BlueprintAtmostphere";
 
-export default function MonoSpecimen() {
+export const MonoSpecimen = () => {
 
   const props = {
     npmLink: "https://www.npmjs.com/package/@ocodo/ocodo-mono",
@@ -14,7 +14,7 @@ export default function MonoSpecimen() {
 
   return (
     <div className="mono min-h-screen overflow-x-hidden bg-[#211d19] text-[#e3d8c8]">
-      <BlueprintAtmostphere />
+      <BlueprintAtmosphere />
       <Header {...props} />
       <main className="relative z-10">
         {/* HERO */}

@@ -1,4 +1,4 @@
-export function Footer() {
+export const Footer = () => {
   return (
     <footer className="mx-auto max-w-[1600px] border-x border-[#51473c] px-5 sm:px-8 lg:px-12">
       <div className="grid gap-8 py-12 sm:grid-cols-3">
