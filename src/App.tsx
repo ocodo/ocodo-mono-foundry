@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import TeleportToTop from "@/components/TeleportToTop";
 import Index from "@/pages/Index";
 import DotZeroSpecimen from "@/pages/DotZeroSpecimen";
@@ -10,7 +10,7 @@ const basename = window.location.pathname.split("/").filter(Boolean)[0]
 
 export default function App() {
   return (
-    <BrowserRouter basename={basename}>
+    <HashRouter basename={basename}>
       <TeleportToTop />
       <Routes>
         <Route
@@ -24,6 +24,6 @@ export default function App() {
           element={<DotZeroSpecimen />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
