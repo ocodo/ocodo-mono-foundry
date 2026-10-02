@@ -1,4 +1,4 @@
-const glyphs = [
+export const glyphs = [
   ["󰅩", "U+F0169"],
   ["", "U+E795"],
   ["", "U+E5FF"],
@@ -13,7 +13,7 @@ const glyphs = [
   ["󰅟", "U+F015F"],
 ] as const;
 
-export default function GlyphSampler() {
+export function GlyphSampler() {
   return (
     <div className="border border-[#51473c] bg-[#27221d] p-8 sm:p-12">
       <div className="mb-8 text-[9px] text-[#b99570]">

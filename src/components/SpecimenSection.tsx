@@ -6,7 +6,7 @@ interface SpecimenSectionProps {
   children: ReactNode;
 }
 
-export default function SpecimenSection({
+export function SpecimenSection({
   index,
   title,
   children,

@@ -1,15 +1,21 @@
 import BlueprintAtmostphere from "@/components/BlueprintAtmostphere";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import SpecimenSection from "@/components/SpecimenSection";
-import WeightSample from "@/components/WeightSample";
-import GlyphSampler from "@/components/GlyphSampler";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SpecimenSection } from "@/components/SpecimenSection";
+import { WeightSample } from "@/components/WeightSample";
+import { GlyphSampler } from "@/components/GlyphSampler";
 
 export default function DotZeroSpecimen() {
+
+  const props = {
+    npmLink: "https://www.npmjs.com/package/@ocodo/ocodo-mono-dotzero",
+    githubLink: "https://github.com/ocodo/ocodo-mono-dotzero",
+  }
+
   return (
     <div className="dotzero min-h-screen overflow-x-hidden bg-[#211d19] text-[#e3d8c8]">
       <BlueprintAtmostphere />
-      <Header />
+      <Header {...props} />
       <main className="relative z-10">
         {/* HERO */}
         <section className="mx-auto max-w-[1600px] border-x border-b border-[#51473c] px-5 sm:px-8 lg:px-12">

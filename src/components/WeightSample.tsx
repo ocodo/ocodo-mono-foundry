@@ -3,7 +3,7 @@ interface WeightSampleProps {
   label: string;
 }
 
-export default function WeightSample({
+export function WeightSample({
   weight,
   label,
 }: WeightSampleProps) {

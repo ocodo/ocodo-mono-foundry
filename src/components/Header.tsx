@@ -1,6 +1,12 @@
 import { Github, Npm } from "pixelarticons/react";
+import type { FC } from "react";
 
-export default function Header() {
+interface HeaderProps {
+  npmLink: string;
+  githubLink: string;
+}
+
+export const Header: FC<HeaderProps> = ({ npmLink, githubLink }) => {
   return (
     <header className="relative z-10 border-b border-[#51473c]">
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
@@ -8,13 +14,12 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <div className="crosshair" />
             <div className="flex flex-row gap-5 items-center py-4">
-              <a className="dotzero text-sm" href="https://www.npmjs.com/org/ocodo">
-                OCODO TYPE
-              </a>
-              <a className="dotzero text-sm" href="https://www.npmjs.com/org/ocodo">
+              OCODO TYPE
+
+              <a className="dotzero text-sm" href={npmLink}>
                 <Npm />
               </a>
-              <a className="dotzero text-sm" href="https://github.com/ocodo/ocodo-mono-foundry">
+              <a className="dotzero text-sm" href={githubLink}>
                 <Github />
               </a>
             </div>
