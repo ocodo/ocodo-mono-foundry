@@ -4,21 +4,17 @@ import Index from "@/pages/Index";
 import DotZeroSpecimen from "@/pages/DotZeroSpecimen";
 import MonoSpecimen from "@/pages/MonoSpecimen";
 
-const basename = window.location.pathname.split("/").filter(Boolean)[0]
-  ? `/${window.location.pathname.split("/").filter(Boolean)[0]}`
-  : "/";
-
 export default function App() {
   return (
-    <HashRouter basename={basename}>
+    <HashRouter>
       <TeleportToTop />
       <Routes>
         <Route
-	  path="/"
-	  element={<Index />} />
+          path="/"
+          element={<Index />} />
         <Route
-	  path="/specimen-mono"
-	  element={<MonoSpecimen />} />
+          path="/specimen-mono"
+          element={<MonoSpecimen />} />
         <Route
           path="/specimen-mono-dotzero"
           element={<DotZeroSpecimen />}

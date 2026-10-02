@@ -45,7 +45,6 @@ export default function MonoSpecimen() {
               <h1 className="max-w-1400px text-[clamp(4.5rem,4vw,12rem)] font-thin leading-[0.72]">
                 OCODO-MONO
               </h1>
-
               <div className="mt-20 grid gap-10 lg:grid-cols-[1fr_320px]">
                 <div>
                   <div className="dimension mb-3" />
@@ -84,7 +83,9 @@ export default function MonoSpecimen() {
                 </span>
 
                 <span className="text-[#a99a87]">
-                  NPM: @ocodo/ocodo-mono
+                  <a className="text-[#a99a87]" href="https://www.npmjs.com/package/@ocodo/ocodo-mono" target='_blank'>
+                    NPM: @ocodo/ocodo-mono
+                  </a>
                 </span>
               </div>
 
@@ -112,7 +113,9 @@ export default function MonoSpecimen() {
                 </span>
 
                 <span className="text-[#a99a87]">
-                  NPM: @ocodo/ocodo-mono-nerd
+                  <a className="text-[#a99a87]" href="https://www.npmjs.com/package/@ocodo/ocodo-mono-nerd" target='_blank'>
+                    NPM: @ocodo/ocodo-mono-nerd
+                  </a>
                 </span>
               </div>
 
