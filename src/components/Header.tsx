@@ -1,5 +1,5 @@
 import { Github, Npm } from "pixelarticons/react";
-import type { FC } from "react";
+import { useState, type FC } from "react";
 
 interface HeaderProps {
   npmLinks?: string[];
@@ -10,6 +10,13 @@ export const Header: FC<HeaderProps> = ({
   npmLinks = [],
   githubLinks = [],
 }) => {
+
+  const [currentLinkText, setCurrentLinkText] = useState<string>('')
+
+  const linkHover = (link:string) => {
+    setCurrentLinkText(link.replace('https://',''))
+  }
+
   return (
     <header className="relative z-10 border-b border-[#51473c]">
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
@@ -25,6 +32,8 @@ export const Header: FC<HeaderProps> = ({
                   key={link}
                   className="dotzero text-sm"
                   href={link}
+                  onMouseOver={() => linkHover(link)}
+                  onMouseOut={() => linkHover('')}
                 >
                   <Npm />
                 </a>
@@ -35,10 +44,14 @@ export const Header: FC<HeaderProps> = ({
                   key={link}
                   className="dotzero text-sm"
                   href={link}
+                  onMouseOver={() => linkHover(link)}
+                  onMouseOut={() => linkHover('')}
                 >
                   <Github />
                 </a>
               ))}
+
+              {currentLinkText}
             </div>
           </div>
 

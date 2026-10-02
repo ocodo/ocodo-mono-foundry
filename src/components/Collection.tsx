@@ -45,17 +45,10 @@ const families: FontFamily[] = [
 
 export const Collection = () => {
   return (
-    <section className="mx-auto max-w-[1600px] border-x border-b border-[#51473c] px-5 py-24 sm:px-8 lg:px-12">
-      <div className="mb-16">
-        <div className="mb-4 text-[10px] text-[#b99570]">
-          01 / COLLECTION
-        </div>
-
-        <h2 className="dotzero text-4xl font-thin sm:text-6xl">
-          TWO FAMILIES
-        </h2>
+    <section className="mx-auto max-w-[1600px] border-x border-b border-[#51473c] px-5 py-10 sm:px-8 lg:px-12">
+      <div className="mb-4 text-[20px] text-[#b99570]">
+        01 / COLLECTION
       </div>
-
       <div className="grid gap-px border border-[#51473c] bg-[#51473c] lg:grid-cols-2">
         {families.map((family) => (
           <FamilyCard key={family.id} family={family} />

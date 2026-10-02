@@ -6,7 +6,7 @@ import { Hero } from "@/components/Hero";
 
 export function Index() {
   const props = {
-    npmLinks: ["https://www.npmjs.com/org/ocodo"],
+    npmLinks: ["https://npmjs.com/org/ocodo"],
     githubLinks: [
       "https://github.com/ocodo/ocodo-mono",
       "https://github.com/ocodo/ocodo-mono-dotzero",

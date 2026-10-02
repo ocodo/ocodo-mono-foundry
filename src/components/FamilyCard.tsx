@@ -6,7 +6,7 @@ interface FamilyCardProps {
   family: FontFamily;
 }
 
-export const FamilyCard:FC<FamilyCardProps>= ({ family }) => {
+export const FamilyCard: FC<FamilyCardProps> = ({ family }) => {
   const {
     number,
     name,
@@ -41,18 +41,27 @@ export const FamilyCard:FC<FamilyCardProps>= ({ family }) => {
           {name}
         </div>
 
-        <div className="mb-12">
-          <div className="mb-4 text-[10px] text-[#b99570]">
+        <div className="mb-2">
+          <div className="mb-4 text-[20px] text-[#b99570]">
             {title}
           </div>
 
           <p className="max-w-lg text-xs leading-6 text-[#a99a87]">
             {description}
           </p>
+
+          <Link
+            to={specimen}
+            className="inline-flex items-center gap-5 border border-[#51473c] px-6 py-2 my-5 text-[9px] text-[#b99570] transition duration-300 hover:border-[#b99570] hover:bg-[#b99570] hover:text-[#211d19]"
+          >
+            OPEN SPECIMEN
+            <span>→</span>
+          </Link>
+
         </div>
 
         <div
-          className={`${fontClass} mb-10 border-y border-[#51473c] py-7 text-[clamp(2rem,1vw,4rem)] font-light leading-[1.1]`}
+          className={`${fontClass} mb-4 border-y border-[#51473c] py-7 text-[clamp(2rem,1vw,4rem)] font-light leading-[1.1]`}
         >
           ABCDEFGHIJKLMNOPQRSTUVWXYZ
           <br />
@@ -74,14 +83,6 @@ export const FamilyCard:FC<FamilyCardProps>= ({ family }) => {
             CODE / UI / DATA
           </div>
         </div>
-
-        <Link
-          to={specimen}
-          className="inline-flex items-center gap-5 border border-[#51473c] px-6 py-4 text-[9px] text-[#b99570] transition duration-300 hover:border-[#b99570] hover:bg-[#b99570] hover:text-[#211d19]"
-        >
-          OPEN SPECIMEN
-          <span>→</span>
-        </Link>
 
         <div className="mt-12 border-t border-[#51473c] pt-8">
           <div className="mb-5 flex items-center justify-between text-[9px]">

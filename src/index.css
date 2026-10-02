@@ -51,6 +51,7 @@
   --accent: #b99570;
   --accent-bright: #c9aa89;
   --accent-dark: #786553;
+  --font-mono: "Ocodo Mono DotZero";
 }
 
 * {
@@ -60,6 +61,7 @@
 html {
   scroll-behavior: smooth;
   background: var(--bg);
+  font-family: var(--font-mono);
 }
 
 body {

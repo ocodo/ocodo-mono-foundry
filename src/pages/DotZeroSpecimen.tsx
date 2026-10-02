@@ -8,7 +8,7 @@ import { BlueprintAtmosphere } from "@/components/BlueprintAtmostphere";
 export function DotZeroSpecimen() {
 
   const props = {
-    npmLinks: ["https://www.npmjs.com/package/@ocodo/ocodo-mono-dotzero"],
+    npmLinks: ["https://npmjs.com/package/@ocodo/ocodo-mono-dotzero"],
     githubLinks: ["https://github.com/ocodo/ocodo-mono-dotzero"],
   }
 

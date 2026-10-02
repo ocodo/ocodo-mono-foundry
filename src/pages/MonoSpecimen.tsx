@@ -8,8 +8,8 @@ import { BlueprintAtmosphere } from "@/components/BlueprintAtmostphere";
 export const MonoSpecimen = () => {
 
   const props = {
-    npmLinks: ["https://www.npmjs.com/package/@ocodo/ocodo-mono"],
-    githubLinks: ["https://www.npmjs.com/package/@ocodo/ocodo-mono"],
+    npmLinks: ["https://npmjs.com/package/@ocodo/ocodo-mono"],
+    githubLinks: ["https://github.com/ocodo/ocodo-mono"],
   };
 
   return (
